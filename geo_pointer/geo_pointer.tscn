@@ -1,0 +1,136 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://geo_pointer/geo_pointer.gd" type="Script" id=1]
+[ext_resource path="res://geo_pointer/connecting_3.png" type="Texture" id=2]
+[ext_resource path="res://geo_pointer/connecting_0.png" type="Texture" id=3]
+[ext_resource path="res://geo_pointer/connecting_1.png" type="Texture" id=4]
+[ext_resource path="res://geo_pointer/connecting_2.png" type="Texture" id=5]
+[ext_resource path="res://geo_pointer/weather_icons/01d.png" type="Texture" id=6]
+[ext_resource path="res://geo_pointer/weather_icons/01n.png" type="Texture" id=7]
+[ext_resource path="res://geo_pointer/weather_icons/02d.png" type="Texture" id=8]
+[ext_resource path="res://geo_pointer/weather_icons/02n.png" type="Texture" id=9]
+[ext_resource path="res://geo_pointer/weather_icons/03d.png" type="Texture" id=10]
+[ext_resource path="res://geo_pointer/weather_icons/11n.png" type="Texture" id=11]
+[ext_resource path="res://geo_pointer/weather_icons/13n.png" type="Texture" id=12]
+[ext_resource path="res://geo_pointer/weather_icons/50d.png" type="Texture" id=13]
+[ext_resource path="res://geo_pointer/weather_icons/50n.png" type="Texture" id=14]
+[ext_resource path="res://geo_pointer/weather_icons/13d.png" type="Texture" id=15]
+[ext_resource path="res://geo_pointer/weather_icons/10n.png" type="Texture" id=16]
+[ext_resource path="res://geo_pointer/weather_icons/10d.png" type="Texture" id=17]
+[ext_resource path="res://geo_pointer/weather_icons/09n.png" type="Texture" id=18]
+[ext_resource path="res://geo_pointer/weather_icons/09d.png" type="Texture" id=19]
+[ext_resource path="res://geo_pointer/weather_icons/03n.png" type="Texture" id=20]
+[ext_resource path="res://geo_pointer/weather_icons/11d.png" type="Texture" id=21]
+[ext_resource path="res://geo_pointer/weather_icons/04d.png" type="Texture" id=22]
+[ext_resource path="res://geo_pointer/weather_icons/04n.png" type="Texture" id=23]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "loading",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "09d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "03n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "13n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "01d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "10d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "02n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "04n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "11d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "13d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "10n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "50d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "09n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "01n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "50n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "03d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "02d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "04d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "11n",
+"speed": 5.0
+} ]
+
+[node name="MapPointer" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+billboard = 1
+frames = SubResource( 1 )
+animation = "loading"
+frame = 3
+playing = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

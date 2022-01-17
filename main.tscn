@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://eo_base_2020_clean_3600x1800.png" type="Texture" id=1]
+[ext_resource path="res://main.gd" type="Script" id=2]
+
+[sub_resource type="SphereShape" id=1]
+radius = 10.0
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="PanoramaSky" id=3]
+
+[sub_resource type="Environment" id=4]
+background_mode = 1
+background_sky = SubResource( 3 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )
+
+[node name="CSGSphere" type="CSGSphere" parent="StaticBody"]
+radius = 10.0
+radial_segments = 48
+rings = 24
+material = SubResource( 2 )
+
+[node name="CameraRot" type="Spatial" parent="StaticBody"]
+
+[node name="SpringArm" type="SpringArm" parent="StaticBody/CameraRot"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+spring_length = 13.0
+
+[node name="Camera" type="Camera" parent="StaticBody/CameraRot/SpringArm"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.9923 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="StaticBody/CameraRot/SpringArm/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.858727, -17.2358, -0.0614986 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
