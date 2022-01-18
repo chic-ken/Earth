@@ -8,16 +8,17 @@ var lon = 135
 
 
 func _ready():
-	$HTTPRequest.connect("request_completed", self, "_on_request_completed")
+	var error = $HTTPRequest.connect("request_completed", self, "_on_request_completed")
 
-	var req_url = "%s?lat=%s&lon=%s&lang=ja&appid=%s" % [OWM_URL, lat, lon, OWM_TOKEN]
-	$HTTPRequest.request(req_url)
+	if !error:
+		var req_url = "%s?lat=%s&lon=%s&lang=ja&appid=%s" % [OWM_URL, lat, lon, OWM_TOKEN]
+		$HTTPRequest.request(req_url)
 
 
-func _on_request_completed(result, response_code, headers, body):
+func _on_request_completed(_result, response_code, _headers, body):
 	var json = JSON.parse(body.get_string_from_utf8())
 
-	if json.result.cod == 200:
+	if response_code == 200:
 		var w = json.result.weather[0]
 		$AnimatedSprite3D.set_animation(w.icon)
 	else:
