@@ -57,8 +57,6 @@ func _camera_raycast(pos):
 		if n.y < 0: lat *= -1
 		if n.x > 0: lon *= -1
 
-#		print("%s, %s" % [lat, lon])
-
 		var g = load("res://geo_pointer/geo_pointer.tscn").instance()
 		g.translation = result.position + (result.normal * 0.2)
 		g.lat = lat

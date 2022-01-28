@@ -1,0 +1,11 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://geo_pointer/Mplus1-Medium.ttf" type="DynamicFontData" id=1]
+
+[resource]
+resource_name = "MplusFont"
+size = 32
+outline_size = 2
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
