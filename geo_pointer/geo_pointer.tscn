@@ -27,49 +27,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "50n",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "13n",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "01d",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "11n",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 20 ) ],
-"loop": true,
-"name": "03n",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ) ],
-"loop": true,
-"name": "04d",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 21 ) ],
-"loop": true,
-"name": "11d",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "03d",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": true,
-"name": "09n",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 16 ) ],
@@ -77,24 +37,19 @@ animations = [ {
 "name": "10n",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ) ],
+"frames": [ ExtResource( 13 ) ],
 "loop": true,
-"name": "09d",
+"name": "50d",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 23 ) ],
 "loop": true,
-"name": "02d",
+"name": "04n",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "01n",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "02n",
+"name": "03d",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ) ],
@@ -102,9 +57,24 @@ animations = [ {
 "name": "13d",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ) ],
+"frames": [ ExtResource( 21 ) ],
 "loop": true,
-"name": "50d",
+"name": "11d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "09n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "02n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "01n",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ) ],
@@ -112,14 +82,44 @@ animations = [ {
 "name": "10d",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "04d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "50n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "02d",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "13n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "11n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "09d",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "loading",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 23 ) ],
+"frames": [ ExtResource( 20 ) ],
 "loop": true,
-"name": "04n",
+"name": "03n",
 "speed": 5.0
 } ]
 

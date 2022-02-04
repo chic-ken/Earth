@@ -27,7 +27,7 @@ func _ready():
 func _process(_delta):
 
 	if request_completed:
-		# Zファイト防止のため温度の表示位置を少しだけ手前にセット
+		# Zファイティング防止のため気温の表示位置を少しだけ手前にセット
 		var cam = get_viewport().get_camera()
 		thermometer.translation = cam.global_transform.basis.z * 0.02
 

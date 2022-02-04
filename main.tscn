@@ -39,7 +39,6 @@ spring_length = 13.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.9923 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="StaticBody/CameraRot/SpringArm/Camera"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.858727, -17.2358, -0.0614986 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
